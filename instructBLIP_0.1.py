@@ -1,5 +1,4 @@
-#! python3
-#instructBLIP.py
+#instructBLIP.py : Python 3.10.12 ,  GPL-3.0 license 
 #use instruct to create custom question based captions for images
 #0.1 - initial setup
 
@@ -16,8 +15,8 @@ processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-flan-
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
 
-url = "https://raw.githubusercontent.com/salesforce/LAVIS/main/docs/_static/Confusing-Pictures.jpg"
-image = Image.open(requests.get(url, stream=True).raw).convert("RGB")
+image_file = "test_image.jpg"
+image = Image.open(image_file).convert("RGB")
 prompt = "What is unusual about this image?"
 inputs = processor(images=image, text=prompt, return_tensors="pt").to(device)
 
