@@ -1,7 +1,14 @@
+#! python3
+#instructBLIP.py
+#use instruct to create custom question based captions for images
+#0.1 - initial setup
+
+import os
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
 import torch
 from PIL import Image
 import requests
+
 
 model = InstructBlipForConditionalGeneration.from_pretrained("Salesforce/instructblip-flan-t5-xl")
 processor = InstructBlipProcessor.from_pretrained("Salesforce/instructblip-flan-t5-xl")
@@ -27,4 +34,3 @@ outputs = model.generate(
 )
 generated_text = processor.batch_decode(outputs, skip_special_tokens=True)[0].strip()
 print(generated_text)
-
