@@ -13,7 +13,7 @@ setup venv:
 	source venv/bin/activate  
 	pip install -U -r requirements.txt  
 
-run:
+run:  
 python instructBLIP_#.#.py --img_dir PATH/TO/IMAGE_DIR --prompts PATH/TO/prompts.txt --model model_name
 
 replace #.# with script version number
