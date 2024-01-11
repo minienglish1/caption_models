@@ -18,6 +18,11 @@ python instructBLIP_#.#.py --img_dir PATH/TO/IMAGE_DIR --prompts PATH/TO/prompts
 
 replace #.# with script version number
 
+prompts.txt:  
+Designed for using multiple prompts per image.  
+Create a list of prompts in a text file, example is prompts.txt  
+Per prompt, the generated caption is ", " appended to image_name.txt file  
+
 example .sh file: instructBLIP.sh
  
 Available models are:  
@@ -26,4 +31,4 @@ Available models are:
   Salesforce/instructblip-flan-t5-xl  
   Salesforce/instructblip-flan-t5-xxl  
   
-Designed for using multiple prompts per image.  Per prompt, the generated caption is ", " appended to image_name.txt file
+
