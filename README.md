@@ -23,6 +23,9 @@ Designed for using multiple prompts per image.
 Create a list of prompts in a text file, example is prompts.txt  
 Per prompt, the generated caption is ", " appended to image_name.txt file  
 
+additional aruguments:  
+--overwrite : overwrites extisting caption .txt files  
+
 example .sh file: instructBLIP.sh
  
 Available models are:  
