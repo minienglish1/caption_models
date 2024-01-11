@@ -1,6 +1,7 @@
 #instructBLIP.py : Python 3.10.12 ,  GPL-3.0 license 
 #use instruct to create custom question based captions for images
 #0.1 - initial setup
+#0.2 - add os walk, add image_dir argument
 
 import os
 from transformers import InstructBlipProcessor, InstructBlipForConditionalGeneration
